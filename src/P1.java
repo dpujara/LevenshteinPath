@@ -65,7 +65,12 @@ public class P1 {
 		}
 
 		maxOperation = myIntArray[sourceLength][destLength];
-
+		
+		if(maxOperation == 0 ){
+		System.out.println("Number of operations required are 0");
+			System.exit(0);
+		}
+		
 		Graph g = new Graph((sourceLength + 1) * (destLength + 1));
 		// Generate all possible paths
 		for (int i = 0; i < sourceLength; i++) {
